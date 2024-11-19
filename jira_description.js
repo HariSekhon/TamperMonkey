@@ -22,6 +22,8 @@
 // @grant        none
 // ==/UserScript==
 
+// Tested on Chrome
+
 (function () {
     'use strict';
 
@@ -29,15 +31,19 @@
 
     console.log(`${script_name}: Initializing...`);
 
-    // XXX: Edit text to suit your template preference
-    const editableText = `### Summary of Work
-Add details here
-
-### Steps to Reproduce
-
-1. Step 1
-2. Step 2
-3. Step 3`;
+    // XXX: Edit to suit your template preference - the reason to make this HTML is this is how the Jira UI does it
+    //      so you can edit it normally, otherwise you'll have weird behaviour in the editor
+    const descriptionHTML = `
+<h3>Description</h3>
+<p>As a platform engineer, I want …</p>
+<h3>Acceptance Criteria</h3>
+<ul class="ak-ul" data-indent-level="1">
+<li><p>one</p></li>
+<li><p>two</p></li>
+</ul>
+<h3>Engineering References / Notes</h3>
+<p>Put links and notes here</p></div>
+    `;
 
     // prevent excessive executions
     let isProcessing = false;
@@ -71,12 +77,25 @@ Add details here
             if (placeholder) {
                 placeholder.remove();
 
-                const editableParagraph = document.createElement('p');
-                editableParagraph.contentEditable = true;
-                editableParagraph.innerHTML = editableText.replace(/\n/g, '<br>'); // Convert newlines to <br>
+                //const editableParagraph = document.createElement('p');
+                //editableParagraph.contentEditable = true;
+                //editableParagraph.innerHTML = description.trim() //.replace(/\n/g, '<br>'); // Convert newlines to <br>;
 
-                editorArea.innerHTML = ''; // Clear existing content
-                editorArea.appendChild(editableParagraph); // Add the editable paragraph
+                //editorArea.innerHTML = ''; // Clear existing content
+                //editorArea.appendChild(editableParagraph); // Add the editable paragraph
+
+                const template = document.createElement('template');
+                template.innerHTML = descriptionHTML.trim(); // Trim to avoid extra text nodes
+
+                // clear all existing children to remove trailingBreak and other placeholders which cause prepended space to the top of the description
+                while (editorArea.firstChild) {
+                    editorArea.removeChild(editorArea.firstChild);
+                }
+
+                // append the native elements directly to the editor
+                while (template.content.firstChild) {
+                    editorArea.appendChild(template.content.firstChild);
+                }
 
                 //textInserted = true;
 
