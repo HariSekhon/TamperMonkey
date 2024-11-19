@@ -70,18 +70,18 @@ Add details here
             const placeholder = editorArea.querySelector('span[data-testid="placeholder-test-id"]');
             if (placeholder) {
                 placeholder.remove();
+
+                const editableParagraph = document.createElement('p');
+                editableParagraph.contentEditable = true;
+                editableParagraph.innerHTML = editableText.replace(/\n/g, '<br>'); // Convert newlines to <br>
+
+                editorArea.innerHTML = ''; // Clear existing content
+                editorArea.appendChild(editableParagraph); // Add the editable paragraph
+
+                //textInserted = true;
+
+                console.log(`${script_name}: added Jira Description`);
             }
-
-            const editableParagraph = document.createElement('p');
-            editableParagraph.contentEditable = true;
-            editableParagraph.innerHTML = editableText.replace(/\n/g, '<br>'); // Convert newlines to <br>
-
-            editorArea.innerHTML = ''; // Clear existing content
-            editorArea.appendChild(editableParagraph); // Add the editable paragraph
-
-            //textInserted = true;
-
-            console.log(`${script_name}: added Jira Description`);
         } else {
             console.log(`${script_name}: Jira Description editor not found`);
         }
