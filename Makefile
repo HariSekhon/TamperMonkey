@@ -4,7 +4,7 @@
 #
 #  vim:ts=4:sts=4:sw=4:noet
 #
-#  https://github.com/HariSekhon/Template-Repo
+#  https://github.com/HariSekhon/TamperMonkey
 #
 #  If you're using my code you're welcome to connect with me on LinkedIn and optionally send me feedback
 #
@@ -20,15 +20,15 @@
 #
 # Alpine:
 #
-#   apk add --no-cache git make && git clone https://github.com/HariSekhon/Template-repo repo && cd repo && make
+#   apk add --no-cache git make && git clone https://github.com/HariSekhon/TamperMonkey repo && cd repo && make
 #
 # Debian / Ubuntu:
 #
-#   apt-get update && apt-get install -y make git && git clone https://github.com/HariSekhon/Template-repo repo && cd repo && make
+#   apt-get update && apt-get install -y make git && git clone https://github.com/HariSekhon/TamperMonkey repo && cd repo && make
 #
 # RHEL / CentOS:
 #
-#   yum install -y make git && git clone https://github.com/HariSekhon/Template-repo repo && cd repo && make
+#   yum install -y make git && git clone https://github.com/HariSekhon/TamperMonkey repo && cd repo && make
 
 # ===================
 
@@ -36,26 +36,18 @@ ifneq ("$(wildcard bash-tools/Makefile.in)", "")
 	include bash-tools/Makefile.in
 endif
 
-REPO := HariSekhon/Template-Repo
+REPO := HariSekhon/TamperMonkey
 
 CODE_FILES := $(shell git ls-files | grep -E -e '\.sh$$' -e '\.py$$' | sort)
 
 .PHONY: build
 build: init
-	@echo ================
-	@echo Template-repo Builds
-	@echo ================
+	@echo ===================
+	@echo TamperMonkey Builds
+	@echo ===================
 	@$(MAKE) git-summary
 	@echo
-	# defer via external sub-call, otherwise will result in error like
-	# make: *** No rule to make target 'python-version', needed by 'build'.  Stop.
-	@$(MAKE) python-version
-
-	if [ -z "$(CPANM)" ]; then make; exit $$?; fi
-	$(MAKE) system-packages-python
-
-	# TODO: uncomment if adding requirements.txt with pip modules
-	#$(MAKE) python
+	@echo Nothing to build
 
 .PHONY: init
 init:
@@ -68,18 +60,11 @@ init:
 install: build
 	@:
 
-.PHONY: python
-python:
-	@PIP=$(PIP) PIP_OPTS="--ignore-installed" bash-tools/python/python_pip_install_if_absent.sh requirements.txt
-	@echo
-	$(MAKE) pycompile
-	@echo
-	@echo 'BUILD SUCCESSFUL (Template-Repo)'
-
 .PHONY: test
 test:
 	bash-tools/checks/check_all.sh
 
 .PHONY: clean
 clean:
-	@rm -fv -- *.pyc *.pyo
+	@#rm -fv -- *.pyc *.pyo
+	@echo Nothing to clean
