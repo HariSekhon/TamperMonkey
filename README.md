@@ -69,27 +69,7 @@ and press any key in the description box to trigger the script to fill in the de
 and then paste your content back in and tweak it.
 
 You can edit the `const descriptionHTML =
-` line of code near the top to suit your tastes, currently it is set to this:
-
-```html
-<h3>Summary</h3>
-<p><strong>As a</strong> platform engineer<br />
-  <strong>I want</strong> ...<br />
-  <strong>So that</strong> ...</p>
-<h3>Acceptance Criteria</h3>
-<ul class="ak-ul" data-indent-level="1">
-  <li><p>Criteria one...</p></li>
-  <li><p>Criteria two...</p></li>
-</ul>
-<h3>Engineering Notes & References</h3>
-<ul class="ak-ul" data-indent-level="1">
-  <li><p>Put Notes here</p></li>
-  <li><p>Record design decisions</p></li>
-  <li><p>URLs to references and relevant docs</p></li>
-</ul>
-```
-
-Which renders in the Jira UI as:
+` line of code near the top to suit your tastes, currently it renders in the Jira UI as:
 
 <h3>Summary</h3>
 <p><strong>As a</strong> platform engineer<br />
