@@ -94,6 +94,8 @@
                 const template = document.createElement('template');
                 // Trim to avoid extra text nodes leading to whitespace at top of description
                 const descriptionHTMLtrimmed = descriptionHTML.trim();
+                // imported implicity by TamperMonkey header
+                // eslint-disable-next-line no-undef
                 const sanitizedHTML = DOMPurify.sanitize(descriptionHTMLtrimmed);
                 template.innerHTML = sanitizedHTML;
 
