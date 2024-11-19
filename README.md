@@ -43,6 +43,7 @@
 [![BitBucket Pipeline](https://img.shields.io/badge/Bitbucket%20CI-legacy-lightgrey?logo=bitbucket)](https://bitbucket.org/HariSekhon/TamperMonkey/addon/pipelines/home#!/)
 -->
 
+[![EsLint](https://github.com/HariSekhon/TamperMonkey/actions/workflows/eslint.yaml/badge.svg)](https://github.com/HariSekhon/TamperMonkey/actions/workflows/eslint.yaml)
 [![Validation](https://github.com/HariSekhon/TamperMonkey/actions/workflows/validate.yaml/badge.svg)](https://github.com/HariSekhon/TamperMonkey/actions/workflows/validate.yaml)
 [![Kics](https://github.com/HariSekhon/TamperMonkey/actions/workflows/kics.yaml/badge.svg)](https://github.com/HariSekhon/TamperMonkey/actions/workflows/kics.yaml)
 [![Grype](https://github.com/HariSekhon/TamperMonkey/actions/workflows/grype.yaml/badge.svg)](https://github.com/HariSekhon/TamperMonkey/actions/workflows/grype.yaml)
