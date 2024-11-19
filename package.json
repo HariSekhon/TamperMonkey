@@ -1,0 +1,17 @@
+{
+  "name": "tampermonkey-scripts",
+  "version": "1.0.0",
+  "description": "Scripts for TamperMonkey to do things like auto-populate Jira tickets description field",
+  "main": "jira_description_autofill.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^9.15.0"
+  },
+  "dependencies": {
+    "@eslint/js": "^9.15.0"
+  }
+}
