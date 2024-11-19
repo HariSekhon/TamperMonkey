@@ -88,7 +88,7 @@ You can edit the `const descriptionHTML =
 </ul>
 ```
 
-Which renders as:
+Which renders in the Jira UI as:
 
 <h3>Summary</h3>
 <p><strong>As a</strong> platform engineer<br />
