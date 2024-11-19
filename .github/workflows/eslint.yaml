@@ -25,6 +25,8 @@ on:
       - main
     paths:
       - '**/*.js'
+      - package.json
+      - package-lock.json
       - .github/workflows/eslint.yaml
   pull_request:
     branches:
@@ -32,6 +34,8 @@ on:
       - main
     paths:
       - '**/*.js'
+      - package.json
+      - package-lock.json
       - .github/workflows/eslint.yaml
   workflow_dispatch:
     inputs:
