@@ -65,28 +65,40 @@ You can edit the `const descriptionHTML =
 ` line of code to suit your tastes, currently it is set to this:
 
 ```html
-<h3>Description</h3>
-<p>As a platform engineer, I want …</p>
+<h3>Summary</h3>
+<p><strong>As a</strong> platform engineer<br />
+  <strong>I want</strong> ...<br />
+  <strong>So that</strong> ...</p>
 <h3>Acceptance Criteria</h3>
 <ul class="ak-ul" data-indent-level="1">
-<li><p>one</p></li>
-<li><p>two</p></li>
+  <li><p>Criteria one...</p></li>
+  <li><p>Criteria two...</p></li>
 </ul>
-<h3>Engineering References / Notes</h3>
-<p>Put links and notes here</p></div>
+<h3>Engineering Notes & References</h3>
+<ul class="ak-ul" data-indent-level="1">
+  <li><p>Put Notes here</p></li>
+  <li><p>Record design decisions</p></li>
+  <li><p>URLs to references and relevant docs</p></li>
+</ul>
 ```
 
 Which renders as:
 
-<h3>Description</h3>
-<p>As a platform engineer, I want …</p>
+<h3>Summary</h3>
+<p><strong>As a</strong> platform engineer<br />
+<strong>I want</strong> ...<br />
+<strong>So that</strong> ...</p>
 <h3>Acceptance Criteria</h3>
 <ul class="ak-ul" data-indent-level="1">
-<li><p>one</p></li>
-<li><p>two</p></li>
+<li><p>Criteria one...</p></li>
+<li><p>Criteria two...</p></li>
 </ul>
-<h3>Engineering References / Notes</h3>
-<p>Put links and notes here</p></div>
+<h3>Engineering Notes & References</h3>
+<ul class="ak-ul" data-indent-level="1">
+<li><p>Put Notes here</p></li>
+<li><p>Record design decisions</p></li>
+<li><p>URLs to references and relevant docs</p></li>
+</ul>
 
 ## More Core Repos
 
