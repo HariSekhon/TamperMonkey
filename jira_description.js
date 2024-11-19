@@ -13,10 +13,10 @@
 //
 
 // ==UserScript==
-// @name         Autofill Jira Ticket Description
+// @name         Jira Description Autofill
 // @namespace    http://tampermonkey.net/
 // @version      1.8
-// @description  Insert editable text in Jira's description area without CPU overload
+// @description  Insert editable text in Jira's description field
 // @author       Hari Sekhon
 // @match        https://*.atlassian.net/*
 // @grant        none
@@ -24,6 +24,10 @@
 
 (function () {
     'use strict';
+
+    const script_name = 'TamperMonkey: Jira Description Autofill';
+
+    console.log('${script_name}!: Initializing...');
 
     // XXX: Edit text to suit your template preference
     const editableText = `### Summary of Work
@@ -35,55 +39,67 @@ Add details here
 2. Step 2
 3. Step 3`;
 
-    let textInserted = false;
+    // prevent excessive executions
+    let isProcessing = false;
+    //let textInserted = false;
 
     function fillJiraDescription() {
 
-        if (textInserted) {
-            console.log('Text already inserted, skipping...');
-            return
+        // If closing and re-opening or opening more than Jira ticket in the same tab,
+        // this fails to insert the description into the new Jira ticket
+        //if (textInserted) {
+        //    console.log('Text already inserted, skipping...');
+        //    return
+        //}
+
+        // Prevent function from running if it's already processing
+        if (isProcessing) {
+            return;
         }
 
-        console.log('Attempting to find the description area...');
+        console.log('${script_name}!: searching for description area...');
 
-        // Locate the description editor div
         const editorArea = document.querySelector('div#ak-editor-textarea');
 
         if (editorArea) {
-            console.log('Found the description editor:', editorArea);
+            console.log('${script_name}!: found the description editor:', editorArea);
 
-            // Get the existing placeholder text (if it exists)
             const placeholder = editorArea.querySelector('span[data-testid="placeholder-test-id"]');
-            // If placeholder exists, remove it
             if (placeholder) {
                 placeholder.remove();
             }
 
-            // Create a new <p> element with the editable content
             const editableParagraph = document.createElement('p');
             editableParagraph.contentEditable = true;
             editableParagraph.innerHTML = editableText.replace(/\n/g, '<br>'); // Convert newlines to <br>
 
-            // Insert the new content into the editor
             editorArea.innerHTML = ''; // Clear existing content
             editorArea.appendChild(editableParagraph); // Add the editable paragraph
 
-            // Set the flag to true so it won't insert again
-            textInserted = true;
+            //textInserted = true;
 
-            console.log('Editable text inserted successfully!');
+            console.log('${script_name}!: added Jira Description');
         } else {
-            console.log('Description editor not found');
+            console.log('${script_name}!: Jira Description editor not found');
         }
+        // Reset the processing flag after a short delay
+        setTimeout(() => {
+            isProcessing = false;
+        }, 1000); // 1 second delay before the function can run again
     }
 
     // Monitor the DOM for dynamic changes
     const observer = new MutationObserver(() => {
-        fillJiraDescription(); // Retry inserting the editable text when the DOM changes
+        // Only trigger the function if the description area is not yet populated
+        const editorArea = document.querySelector('div#ak-editor-textarea');
+        if (editorArea && !editorArea.querySelector('p[contenteditable="true"]')) {
+            fillJiraDescription();
+        }
     });
 
     // Observe the entire body for changes
     observer.observe(document.body, { childList: true, subtree: true } );
 
+    // initial call to fill the description if possible
     fillJiraDescription();
 })();
