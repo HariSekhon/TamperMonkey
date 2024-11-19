@@ -35,15 +35,21 @@
     // XXX: Edit to suit your template preference - the reason to make this HTML is this is how the Jira UI does it
     //      so you can edit it normally, otherwise you'll have weird behaviour in the editor
     const descriptionHTML = `
-<h3>Description</h3>
-<p>As a platform engineer, I want …</p>
+<h3>Summary</h3>
+<p><strong>As a</strong> platform engineer<br />
+<strong>I want</strong> ...<br />
+<strong>So that</strong> ...</p>
 <h3>Acceptance Criteria</h3>
 <ul class="ak-ul" data-indent-level="1">
-<li><p>one</p></li>
-<li><p>two</p></li>
+<li><p>Criteria one...</p></li>
+<li><p>Criteria two...</p></li>
 </ul>
-<h3>Engineering References / Notes</h3>
-<p>Put links and notes here</p></div>
+<h3>Engineering Notes & References</h3>
+<ul class="ak-ul" data-indent-level="1">
+<li><p>Put Notes here</p></li>
+<li><p>Record design decisions</p></li>
+<li><p>URLs to references and relevant docs</p></li>
+</ul>
     `;
 
     // prevent excessive executions
