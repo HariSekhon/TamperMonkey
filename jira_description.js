@@ -87,7 +87,8 @@
                 const template = document.createElement('template');
                 template.innerHTML = descriptionHTML.trim(); // Trim to avoid extra text nodes
 
-                // clear all existing children to remove trailingBreak and other placeholders which cause prepended space to the top of the description
+                // clear all existing children to remove trailingBreak and other placeholders
+                // which cause prepended space to the top of the description box
                 while (editorArea.firstChild) {
                     editorArea.removeChild(editorArea.firstChild);
                 }
