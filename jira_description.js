@@ -52,17 +52,20 @@ Add details here
         //    return
         //}
 
-        // Prevent function from running if it's already processing
         if (isProcessing) {
+            console.log(`${script_name}: processing semaphore is set, skipping execution...`);
             return;
         }
+
+        console.log(`${script_name}: setting semaphore to prevent re-running function concurrently`);
+        isProcessing = true;
 
         console.log(`${script_name}: searching for description area...`);
 
         const editorArea = document.querySelector('div#ak-editor-textarea');
 
         if (editorArea) {
-            console.log('${script_name}!: found the description editor:', editorArea);
+            console.log(`${script_name}: found the description editor:`, editorArea);
 
             const placeholder = editorArea.querySelector('span[data-testid="placeholder-test-id"]');
             if (placeholder) {
@@ -82,10 +85,11 @@ Add details here
         } else {
             console.log(`${script_name}: Jira Description editor not found`);
         }
-        // Reset the processing flag after a short delay
+
+        console.log(`${script_name}: setting timeout of 2000ms before resetting the processing flag`);
         setTimeout(() => {
             isProcessing = false;
-        }, 1000); // 1 second delay before the function can run again
+        }, 2000); // 2 second delay before the function can run again
     }
 
     console.log(`${script_name}: starting MutationObserver to monitor dynamic DOM changes`);
@@ -100,6 +104,10 @@ Add details here
     // Observe the entire body for changes
     observer.observe(document.body, { childList: true, subtree: true } );
 
-    // initial call to fill the description if possible
+    console.log(`${script_name}: initial call to autofill description if already present`);
     fillJiraDescription();
+
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
 })();
