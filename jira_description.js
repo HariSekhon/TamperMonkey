@@ -77,5 +77,13 @@ Add details here
         }
     }
 
+    // Monitor the DOM for dynamic changes
+    const observer = new MutationObserver(() => {
+        fillJiraDescription(); // Retry inserting the editable text when the DOM changes
+    });
+
+    // Observe the entire body for changes
+    observer.observe(document.body, { childList: true, subtree: true } );
+
     fillJiraDescription();
 })();
