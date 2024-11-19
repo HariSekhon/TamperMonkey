@@ -47,7 +47,8 @@ build: init
 	@echo ===================
 	@$(MAKE) git-summary
 	@echo
-	@echo Nothing to build
+	@#echo Nothing to build
+	bash-tools/checks/check_javascript_eslint.sh
 
 .PHONY: init
 init:
