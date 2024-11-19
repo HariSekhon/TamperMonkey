@@ -20,6 +20,7 @@
 // @author       Hari Sekhon
 // @match        https://*.atlassian.net/*
 // @grant        none
+// @require  https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.4.0/purify.min.js
 // ==/UserScript==
 
 // Tested on Chrome
@@ -85,7 +86,10 @@
                 //editorArea.appendChild(editableParagraph); // Add the editable paragraph
 
                 const template = document.createElement('template');
-                template.innerHTML = descriptionHTML.trim(); // Trim to avoid extra text nodes
+                // Trim to avoid extra text nodes leading to whitespace at top of description
+                descriptionHTML = descriptionHTML.trim();
+                const sanitizedHTML = DOMPurify.sanitize(descriptionHTML);
+                template.innerHTML = sanitizedHTML;
 
                 // clear all existing children to remove trailingBreak and other placeholders
                 // which cause prepended space to the top of the description box
