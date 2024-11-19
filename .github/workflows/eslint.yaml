@@ -57,4 +57,5 @@ jobs:
     name: EsLint
     uses: HariSekhon/GitHub-Actions/.github/workflows/eslint.yaml@master
     with:
+      submodules: 'false'
       debug: ${{ github.event.inputs.debug }}
