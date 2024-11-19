@@ -127,7 +127,7 @@
     console.log(`${script_name}: initial call to autofill description if already present`);
     fillJiraDescription();
 
-    function sleep(ms) {
-        return new Promise(resolve => setTimeout(resolve, ms));
-    }
+    //function sleep(ms) {
+    //    return new Promise(resolve => setTimeout(resolve, ms));
+    //}
 })();
