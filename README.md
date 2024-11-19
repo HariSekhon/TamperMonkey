@@ -30,13 +30,13 @@
 [![Ubuntu](https://img.shields.io/badge/Linux-Ubuntu-E95420?logo=ubuntu&logoColor=white)](https://ubuntu.com/)
 -->
 
-<!-- TODO: Replace Azure DevOps Pipeline ID here -->
 [![CI Builds Overview](https://img.shields.io/badge/CI%20Builds-Overview%20Page-blue?logo=circleci)](https://harisekhon.github.io/CI-CD/)
 [![Repo on GitHub](https://img.shields.io/badge/repo-GitHub-2088FF?logo=github)](https://github.com/HariSekhon/TamperMonkey)
 [![Repo on GitLab](https://img.shields.io/badge/repo-GitLab-FCA121?logo=gitlab)](https://gitlab.com/HariSekhon/TamperMonkey)
 [![Repo on Azure DevOps](https://img.shields.io/badge/repo-Azure%20DevOps-0078D7?logo=azure%20devops)](https://dev.azure.com/HariSekhon/GitHub/_git/TamperMonkey)
 [![Repo on BitBucket](https://img.shields.io/badge/repo-BitBucket-0052CC?logo=bitbucket)](https://bitbucket.org/HariSekhon/TamperMonkey)
 
+<!-- TODO: Replace Azure DevOps Pipeline ID here -->
 <!--
 [![Azure DevOps Pipeline](https://dev.azure.com/harisekhon/GitHub/_apis/build/status%2FTamperMonkey?branchName=master)](https://dev.azure.com/harisekhon/GitHub/_build/latest?definitionId=15&branchName=master)
 [![GitLab Pipeline](https://img.shields.io/badge/GitLab%20CI-legacy-lightgrey?logo=gitlab)](https://gitlab.com/HariSekhon/TamperMonkey/pipelines)
@@ -61,8 +61,14 @@ Copy and paste these scripts into your [TamperMonkey](https://www.tampermonkey.n
 
 Autofills the Jira ticket description field with HTML contents that you can then edit natively in the Jira UI.
 
+Does not overwrite any already populated description for safety.
+
+For Jira tickets with existing descriptions you can `Ctrl-x` / `Cmd-x` to cut your content out
+and press any key in the description box to trigger the script to fill in the description boilerplate text
+and then paste your content back in and tweak it.
+
 You can edit the `const descriptionHTML =
-` line of code to suit your tastes, currently it is set to this:
+` line of code near the top to suit your tastes, currently it is set to this:
 
 ```html
 <h3>Summary</h3>
