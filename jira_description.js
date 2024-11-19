@@ -27,7 +27,7 @@
 
     const script_name = 'TamperMonkey: Jira Description Autofill';
 
-    console.log('${script_name}!: Initializing...');
+    console.log(`${script_name}: Initializing...`);
 
     // XXX: Edit text to suit your template preference
     const editableText = `### Summary of Work
@@ -57,7 +57,7 @@ Add details here
             return;
         }
 
-        console.log('${script_name}!: searching for description area...');
+        console.log(`${script_name}: searching for description area...`);
 
         const editorArea = document.querySelector('div#ak-editor-textarea');
 
@@ -78,9 +78,9 @@ Add details here
 
             //textInserted = true;
 
-            console.log('${script_name}!: added Jira Description');
+            console.log(`${script_name}: added Jira Description`);
         } else {
-            console.log('${script_name}!: Jira Description editor not found');
+            console.log(`${script_name}: Jira Description editor not found`);
         }
         // Reset the processing flag after a short delay
         setTimeout(() => {
@@ -88,7 +88,7 @@ Add details here
         }, 1000); // 1 second delay before the function can run again
     }
 
-    // Monitor the DOM for dynamic changes
+    console.log(`${script_name}: starting MutationObserver to monitor dynamic DOM changes`);
     const observer = new MutationObserver(() => {
         // Only trigger the function if the description area is not yet populated
         const editorArea = document.querySelector('div#ak-editor-textarea');
