@@ -87,8 +87,8 @@
 
                 const template = document.createElement('template');
                 // Trim to avoid extra text nodes leading to whitespace at top of description
-                descriptionHTML = descriptionHTML.trim();
-                const sanitizedHTML = DOMPurify.sanitize(descriptionHTML);
+                const descriptionHTMLtrimmed = descriptionHTML.trim();
+                const sanitizedHTML = DOMPurify.sanitize(descriptionHTMLtrimmed);
                 template.innerHTML = sanitizedHTML;
 
                 // clear all existing children to remove trailingBreak and other placeholders
