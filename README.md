@@ -107,6 +107,8 @@ Which renders in the Jira UI as:
 <li><p>URLs to references and relevant docs</p></li>
 </ul>
 
+<br />
+
 ## More Core Repos
 
 <!-- OTHER_REPOS_START -->
