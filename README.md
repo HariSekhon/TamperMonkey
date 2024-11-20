@@ -54,7 +54,13 @@
 
 ## TamperMonkey Scripts
 
-Copy and paste these scripts into your [TamperMonkey](https://www.tampermonkey.net/) browser extension to customize your browsing experience.
+Copy and paste these scripts into your
+[TamperMonkey](https://www.tampermonkey.net/)
+browser extension to customize your browsing experience.
+
+See the
+[Knowlege-Base - TamperMonkey](https://github.com/HariSekhon/Knowledge-Base/blob/main/tampermonkey.md)
+page for more general TamperMonkey info.
 
 ### Jira Description Autofill
 
