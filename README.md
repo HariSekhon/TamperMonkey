@@ -116,7 +116,7 @@ You can edit the `const descriptionHTML =
 
 ## Troubleshooting
 
-If the script isn't triggering, check you have copied & pasted it correctly.
+If the script isn't triggering, check you have copied & pasted it entirely correctly.
 
 On one occasion, no scripts were triggering, and the solution was to remote the TamperMonkey Chrome extension and then
 re-add it fresh and then install the script back in again.
