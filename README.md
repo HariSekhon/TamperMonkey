@@ -62,6 +62,25 @@ See the
 [Knowlege-Base - TamperMonkey](https://github.com/HariSekhon/Knowledge-Base/blob/main/tampermonkey.md)
 page for more general TamperMonkey info.
 
+### Install
+
+#### Option 1 - Copy & Paste
+
+Copy and paste the raw code into a new script in TamperMonkey.
+
+Use the `Raw` button on on the top right of the file to copy from.
+
+#### Option 2 - Import from URL
+
+In TamperMonkey settings, go to `Utilies` at the top right,
+then at the bottom of that page see `Import from URL`.
+
+Paste the _Raw_ URL to the script into the box and click `Install`.
+
+Raw URL looks like this, which can be obtained from the `Raw` button at the top right of the file on GitHub:
+
+<https://raw.githubusercontent.com/HariSekhon/TamperMonkey/refs/heads/main/jira_description_autofill.js>
+
 ### Jira Description Autofill
 
 [jira_description_autofill.js](https://github.com/HariSekhon/TamperMonkey/blob/main/jira_description_autofill.js)
