@@ -114,6 +114,21 @@ You can edit the `const descriptionHTML =
 
 <br />
 
+## Troubleshooting
+
+If the script isn't triggering, check you have copied & pasted it correctly.
+
+On one occasion, no scripts were triggering, and the solution was to remote the TamperMonkey Chrome extension and then
+re-add it fresh and then install the script back in again.
+
+There was nothing wrong with the code itself, which is revision controlled and hadn't changed.
+
+See the
+[Knowledge-Base - TamperMonkey Troubleshooting section](https://github.com/HariSekhon/TamperMonkey#troubleshooting)
+for more details.
+
+<br />
+
 ## More Core Repos
 
 <!-- OTHER_REPOS_START -->
