@@ -20,7 +20,7 @@
 // @author       Hari Sekhon
 // @match        https://*.atlassian.net/*
 // @grant        none
-// @require  https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.4.0/purify.min.js
+// @require      https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.4.0/purify.min.js
 // ==/UserScript==
 
 // Tested on Chrome
