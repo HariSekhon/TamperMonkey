@@ -75,7 +75,10 @@
 
         console.log(`${script_name}: searching for description area...`);
 
-        const editorArea = document.querySelector('div#ak-editor-textarea');
+        // matches comment boxes
+        //const editorArea = document.querySelector('div#ak-editor-textarea');
+        // this is more targeted
+        const editorArea = document.querySelector('div[aria-label*="Description"]');
 
         if (editorArea) {
             console.log(`${script_name}: found the description editor:`, editorArea);
