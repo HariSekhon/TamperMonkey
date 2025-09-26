@@ -59,7 +59,7 @@
   - [Install](#install)
     - [Option 1 - Copy & Paste](#option-1---copy--paste)
     - [Option 2 - Import from URL](#option-2---import-from-url)
-  - [Tel to Whatsapp](#tel-to-whatsapp)
+  - [Tel to WhatsApp](#tel-to-whatsapp)
   - [Jira Description Autofill](#jira-description-autofill)
 - [Troubleshooting](#troubleshooting)
 - [More Core Repos](#more-core-repos)
