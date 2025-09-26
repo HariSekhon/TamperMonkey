@@ -53,6 +53,27 @@
 [![SonarCloud](https://github.com/HariSekhon/TamperMonkey/actions/workflows/sonarcloud.yaml/badge.svg)](https://github.com/HariSekhon/TamperMonkey/actions/workflows/sonarcloud.yaml)
 [![Trivy](https://github.com/HariSekhon/TamperMonkey/actions/workflows/trivy.yaml/badge.svg)](https://github.com/HariSekhon/TamperMonkey/actions/workflows/trivy.yaml)
 
+<!-- INDEX_START -->
+
+- [TamperMonkey Scripts](#tampermonkey-scripts)
+  - [Install](#install)
+    - [Option 1 - Copy & Paste](#option-1---copy--paste)
+    - [Option 2 - Import from URL](#option-2---import-from-url)
+  - [Tel to Whatsapp](#tel-to-whatsapp)
+  - [Jira Description Autofill](#jira-description-autofill)
+- [Troubleshooting](#troubleshooting)
+- [More Core Repos](#more-core-repos)
+  - [Knowledge](#knowledge)
+  - [DevOps Code](#devops-code)
+  - [Containerization](#containerization)
+  - [CI/CD](#cicd)
+  - [DBA - SQL](#dba---sql)
+  - [DevOps Reloaded](#devops-reloaded)
+  - [Templates](#templates)
+  - [Misc](#misc)
+
+<!-- INDEX_END -->
+
 ## TamperMonkey Scripts
 
 Copy and paste these scripts into your
