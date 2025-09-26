@@ -28,7 +28,7 @@
   const script_name = 'TamperMonkey: Tel to WhatsApp';
 
   // you'll need to enable Verbose level logging to see this debug logging I've added throughout the code
-  console.log(`${script_name}: Initializing at ${new Date().toISOString()`);
+  console.log(`${script_name}: Initializing at ${new Date().toISOString()}`);
 
   // Convert a tel: value or raw phone string into a wa.me-friendly digits-only string.
   // Accepts formats like tel:+1-234-567-8900, +12345678900, 0012345678900, (123) 456-7890, etc.
