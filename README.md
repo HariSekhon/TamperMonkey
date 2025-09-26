@@ -82,6 +82,12 @@ Raw URL looks like this, which can be obtained from the `Raw` button at the top 
 
 <https://raw.githubusercontent.com/HariSekhon/TamperMonkey/refs/heads/main/jira_description_autofill.js>
 
+### Tel to Whatsapp
+
+[tel_to_whatsapp.js](https://github.com/HariSekhon/TamperMonkey/blob/main/tel_to_whatsapp.js)
+
+Replaces `+tel:...` links to Whatsapp clickable links for convenience.
+
 ### Jira Description Autofill
 
 [jira_description_autofill.js](https://github.com/HariSekhon/TamperMonkey/blob/main/jira_description_autofill.js)
@@ -116,6 +122,9 @@ You can edit the `const descriptionHTML =
 <br />
 
 ## Troubleshooting
+
+Logging added for debugging is visible in the Chrome Developer Tools -> `Console`
+-> `All Levels` drop down -> tick `Verbose`.
 
 If the script isn't triggering, check you have copied & pasted it entirely correctly.
 
