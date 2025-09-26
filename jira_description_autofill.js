@@ -30,7 +30,7 @@
 
     const script_name = 'TamperMonkey: Jira Description Autofill';
 
-    console.log(`${script_name}: Initializing at ${new Date().toISOString()`);
+    console.log(`${script_name}: Initializing at ${new Date().toISOString()}`);
 
     // XXX: Edit to suit your template preference - the reason to make this HTML is this is how the Jira UI does it
     //      so you can edit it normally, otherwise you'll have weird behaviour in the editor
