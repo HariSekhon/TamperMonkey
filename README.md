@@ -103,11 +103,11 @@ Raw URL looks like this, which can be obtained from the `Raw` button at the top 
 
 <https://raw.githubusercontent.com/HariSekhon/TamperMonkey/refs/heads/main/jira_description_autofill.js>
 
-### Tel to Whatsapp
+### Tel to WhatsApp
 
 [tel_to_whatsapp.js](https://github.com/HariSekhon/TamperMonkey/blob/main/tel_to_whatsapp.js)
 
-Replaces `+tel:...` links to Whatsapp clickable links for convenience.
+Replaces `+tel:...` links to WhatsApp clickable links for convenience.
 
 ### Jira Description Autofill
 
