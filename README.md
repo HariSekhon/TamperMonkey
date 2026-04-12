@@ -106,9 +106,10 @@ Raw URL looks like this, which can be obtained from the `Raw` button at the top 
 
 <https://raw.githubusercontent.com/HariSekhon/TamperMonkey/refs/heads/main/jira_description_autofill.js>
 
-#### Option 3 - Add Headers to Download the URL and Updates
+#### Option 3 - UserScript downloadURL
 
-Copy the UserScript section from the script file so that it downloads the script from this GitHub repo:
+Copy the UserScript section from the script file which includes `downloadURL` and `updateURL` the so that it downloads
+the script from this GitHub repo:
 
 ```javascript
 // ==UserScript==
