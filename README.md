@@ -59,6 +59,7 @@
   - [Install](#install)
     - [Option 1 - Copy & Paste](#option-1---copy--paste)
     - [Option 2 - Import from URL](#option-2---import-from-url)
+    - [Option 3 - Add Headers to Download the URL and Updates](#option-3---add-headers-to-download-the-url-and-updates)
   - [Tel to WhatsApp](#tel-to-whatsapp)
   - [Jira Description Autofill](#jira-description-autofill)
 - [Troubleshooting](#troubleshooting)
@@ -67,10 +68,12 @@
   - [DevOps Code](#devops-code)
   - [Containerization](#containerization)
   - [CI/CD](#cicd)
-  - [DBA - SQL](#dba---sql)
+  - [Databases - DBA - SQL](#databases---dba---sql)
   - [DevOps Reloaded](#devops-reloaded)
+  - [Monitoring](#monitoring)
   - [Templates](#templates)
-  - [Misc](#misc)
+  - [Desktop](#desktop)
+  - [Spotify](#spotify)
 
 <!-- INDEX_END -->
 
@@ -102,6 +105,27 @@ Paste the _Raw_ URL to the script into the box and click `Install`.
 Raw URL looks like this, which can be obtained from the `Raw` button at the top right of the file on GitHub:
 
 <https://raw.githubusercontent.com/HariSekhon/TamperMonkey/refs/heads/main/jira_description_autofill.js>
+
+#### Option 3 - Add Headers to Download the URL and Updates
+
+Copy the UserScript section from the script file so that it downloads the script from this GitHub repo:
+
+```javascript
+// ==UserScript==
+// @name         Jira Description Autofill
+// @namespace    http://tampermonkey.net/
+// @version      1.8
+// @description  Insert editable text in Jira's description field
+// @author       Hari Sekhon
+// @match        https://*.atlassian.net/*
+// @grant        none
+// @downloadURL  https://github.com/HariSekhon/TamperMonkey/jira_description_autofill.js
+// @updateURL    https://github.com/HariSekhon/TamperMonkey/jira_description_autofill.js
+// @require      https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.4.0/purify.min.js
+// ==/UserScript==
+```
+
+and then ensure user script updates in TamperMonkey settings are enabled to auto-get the updates.
 
 ### Tel to WhatsApp
 
