@@ -100,7 +100,7 @@ Use the `Raw` button on on the top right of the file to copy from.
 In TamperMonkey settings, go to `Utilities` at the top right,
 then at the bottom of that page see `Import from URL`.
 
-Paste the _Raw_ URL to the script into the box and click `Install`.
+Paste the _Raw_ URL of the script into the box and click `Install`.
 
 Raw URL looks like this, which can be obtained from the `Raw` button at the top right of the file on GitHub:
 
