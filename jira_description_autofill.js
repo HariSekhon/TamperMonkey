@@ -21,6 +21,8 @@
 // @author       Hari Sekhon
 // @match        https://*.atlassian.net/*
 // @grant        none
+// @downloadURL  https://github.com/HariSekhon/TamperMonkey/jira_description_autofill.js
+// @updateURL    https://github.com/HariSekhon/TamperMonkey/jira_description_autofill.js
 // @require      https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.4.0/purify.min.js
 // ==/UserScript==
 
