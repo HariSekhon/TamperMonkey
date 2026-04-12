@@ -97,7 +97,7 @@ Use the `Raw` button on on the top right of the file to copy from.
 
 #### Option 2 - Import from URL
 
-In TamperMonkey settings, go to `Utilies` at the top right,
+In TamperMonkey settings, go to `Utilities` at the top right,
 then at the bottom of that page see `Import from URL`.
 
 Paste the _Raw_ URL to the script into the box and click `Install`.
