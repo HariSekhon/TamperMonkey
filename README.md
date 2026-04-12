@@ -59,7 +59,7 @@
   - [Install](#install)
     - [Option 1 - Copy & Paste](#option-1---copy--paste)
     - [Option 2 - Import from URL](#option-2---import-from-url)
-    - [Option 3 - Add Headers to Download the URL and Updates](#option-3---add-headers-to-download-the-url-and-updates)
+    - [Option 3 - UserScript downloadURL](#option-3---userscript-downloadurl)
   - [Tel to WhatsApp](#tel-to-whatsapp)
   - [Jira Description Autofill](#jira-description-autofill)
 - [Troubleshooting](#troubleshooting)
