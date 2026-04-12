@@ -22,7 +22,7 @@
 // @grant        none
 // ==/UserScript==
 
-// Tested on Chrome
+// Not Properly Tested on Chrome yet
 
 (function () {
     'use strict';
