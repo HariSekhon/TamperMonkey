@@ -20,8 +20,8 @@
 // @description  Automatically clicks "OK, I understand"
 // @match        *://*/*
 // @grant        none
-// @downloadURL  https://github.com/HariSekhon/TamperMonkey/blob/main/auto-close-adblock-popup.js
-// @updateURL    https://github.com/HariSekhon/TamperMonkey/blob/main/auto-close-adblock-popup.js
+// @downloadURL  https://raw.githubusercontent.com/HariSekhon/TamperMonkey/refs/heads/main/auto-close-adblock-popup.js
+// @updateURL    https://raw.githubusercontent.com/HariSekhon/TamperMonkey/refs/heads/main/auto-close-adblock-popup.js
 // ==/UserScript==
 
 // Not Properly Tested on Chrome yet
