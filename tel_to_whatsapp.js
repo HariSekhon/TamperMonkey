@@ -21,8 +21,8 @@
 // @author       Hari Sekhon
 // @match        *://*/*
 // @grant        none
-// @downloadURL  https://github.com/HariSekhon/TamperMonkey/blob/main/tel_to_whatsapp.js
-// @updateURL    https://github.com/HariSekhon/TamperMonkey/blob/main/tel_to_whatsapp.js
+// @downloadURL  https://raw.githubusercontent.com/HariSekhon/TamperMonkey/refs/heads/main/tel_to_whatsapp.js
+// @updateURL    https://raw.githubusercontent.com/HariSekhon/TamperMonkey/refs/heads/main/tel_to_whatsapp.js
 // ==/UserScript==
 
 (function () {
